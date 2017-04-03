@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="toDoJhipsterApp.citizen.home.title">Citizens</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="citizen.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="toDoJhipsterApp.citizen.home.createLabel">
+                        Create new Citizen
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="toDoJhipsterApp.citizen.citizen">Citizen</span></th>
+                    <th><span data-translate="toDoJhipsterApp.citizen.age">Age</span></th>
+                    <th><span data-translate="toDoJhipsterApp.citizen.job">Job</span></th>
+                    <th><span data-translate="toDoJhipsterApp.citizen.company">Company</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="citizen in vm.citizens track by citizen.id">
+                    <td><a ui-sref="citizen-detail({id:citizen.id})">{{citizen.id}}</a></td>
+                    <td>{{citizen.citizen}}</td>
+                    <td>{{citizen.age}}</td>
+                    <td>{{citizen.job}}</td>
+                    <td>
+                        <a ui-sref="company-detail({id:citizen.company.id})">{{citizen.company.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="citizen-detail({id:citizen.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="citizen.edit({id:citizen.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="citizen.delete({id:citizen.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

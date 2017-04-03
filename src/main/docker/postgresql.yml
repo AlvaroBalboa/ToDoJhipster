@@ -1,0 +1,11 @@
+version: '2'
+services:
+    todojhipster-postgresql:
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/ToDoJhipster/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=ToDoJhipster
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

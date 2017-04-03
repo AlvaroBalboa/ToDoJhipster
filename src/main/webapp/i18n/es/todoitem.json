@@ -1,0 +1,25 @@
+{
+    "toDoJhipsterApp": {
+        "todoitem" : {
+            "home": {
+                "title": "Todoitems",
+                "createLabel": "Crear nuevo Todoitem",
+                "createOrEditLabel": "Crear o editar Todoitem"
+            },
+            "created": "Un nuevo Todoitem ha sido creado con el identificador {{ param }}",
+            "updated": "Un Todoitem ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Todoitem ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Todoitem {{ id }}?"
+            },
+            "detail": {
+                "title": "Todoitem"
+            },
+            "todoName": "Todo Name",
+            "dateCreated": "Date Created",
+            "isDone": "Is Done",
+            "dateDue": "Date Due",
+            "citizen": "Citizen"
+        }
+    }
+}

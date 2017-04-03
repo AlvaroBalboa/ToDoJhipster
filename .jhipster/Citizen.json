@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "citizen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "10",
+            "fieldValidateRulesMax": "69"
+        },
+        {
+            "fieldName": "job",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170403184620",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "citizen",
+    "pagination": "no"
+}

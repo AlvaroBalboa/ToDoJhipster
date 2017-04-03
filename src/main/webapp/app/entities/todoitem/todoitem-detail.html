@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="toDoJhipsterApp.todoitem.detail.title">Todoitem</span> {{vm.todoitem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="toDoJhipsterApp.todoitem.todoName">Todo Name</span></dt>
+        <dd>
+            <span>{{vm.todoitem.todoName}}</span>
+        </dd>
+        <dt><span data-translate="toDoJhipsterApp.todoitem.dateCreated">Date Created</span></dt>
+        <dd>
+            <span>{{vm.todoitem.dateCreated | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="toDoJhipsterApp.todoitem.isDone">Is Done</span></dt>
+        <dd>
+            <span>{{vm.todoitem.isDone}}</span>
+        </dd>
+        <dt><span data-translate="toDoJhipsterApp.todoitem.dateDue">Date Due</span></dt>
+        <dd>
+            <span>{{vm.todoitem.dateDue | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="toDoJhipsterApp.todoitem.citizen">Citizen</span></dt>
+        <dd>
+            <a ui-sref="citizen-detail({id:vm.todoitem.citizen.id})">{{vm.todoitem.citizen.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="todoitem-detail.edit({id:vm.todoitem.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
